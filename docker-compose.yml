@@ -13,7 +13,7 @@ services:
       KAFKA_LISTENERS: 'SSL-INTERNAL://:19093,CONTROLLER://kafka-1:29092,SSL://:9093'
       KAFKA_INTER_BROKER_LISTENER_NAME: 'SSL-INTERNAL'
       KAFKA_SECURITY_PROTOCOL: SSL
-      KAFKA_ADVERTISED_LISTENERS: SSL-INTERNAL://kafka-1:19093,SSL://34.69.50.191:29093
+      KAFKA_ADVERTISED_LISTENERS: SSL-INTERNAL://kafka-1:19093,SSL://35.225.212.218:29093
       KAFKA_CONTROLLER_LISTENER_NAMES: 'CONTROLLER'
       CLUSTER_ID: '4L6g3nShT-eMCtK--X86sw'
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
@@ -48,7 +48,7 @@ services:
       KAFKA_LISTENERS: 'SSL-INTERNAL://:19093,CONTROLLER://kafka-2:29092,SSL://:9093'
       KAFKA_INTER_BROKER_LISTENER_NAME: 'SSL-INTERNAL'
       KAFKA_SECURITY_PROTOCOL: SSL
-      KAFKA_ADVERTISED_LISTENERS: SSL-INTERNAL://kafka-2:19093,SSL://34.69.50.191:39093
+      KAFKA_ADVERTISED_LISTENERS: SSL-INTERNAL://kafka-2:19093,SSL://35.225.212.218:39093
       KAFKA_CONTROLLER_LISTENER_NAMES: 'CONTROLLER'
       CLUSTER_ID: '4L6g3nShT-eMCtK--X86sw'
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
@@ -83,7 +83,7 @@ services:
       KAFKA_LISTENERS: 'SSL-INTERNAL://:19093,CONTROLLER://kafka-3:29092,SSL://:9093'
       KAFKA_INTER_BROKER_LISTENER_NAME: 'SSL-INTERNAL'
       KAFKA_SECURITY_PROTOCOL: SSL
-      KAFKA_ADVERTISED_LISTENERS: SSL-INTERNAL://kafka-3:19093,SSL://34.69.50.191:49093
+      KAFKA_ADVERTISED_LISTENERS: SSL-INTERNAL://kafka-3:19093,SSL://35.225.212.218:49093
       KAFKA_CONTROLLER_LISTENER_NAMES: 'CONTROLLER'
       CLUSTER_ID: '4L6g3nShT-eMCtK--X86sw'
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
@@ -279,7 +279,7 @@ services:
       - ./config:/etc/kafka/config
       - kafka-ui-data:/data
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://34.69.50.191:18000/actuator/health"]
+      test: ["CMD", "curl", "-f", "http://35.225.212.218:18000/actuator/health"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -317,7 +317,7 @@ services:
   #     - elastic-logs:/usr/share/elasticsearch/external/logs
   #     - ${PWD}/elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
   #   healthcheck:
-  #     test: ["CMD-SHELL", "curl -s http://34.69.50.191:9200/_cluster/health | grep -q 'status.*green\\|status.*yellow'"]
+  #     test: ["CMD-SHELL", "curl -s http://35.225.212.218:9200/_cluster/health | grep -q 'status.*green\\|status.*yellow'"]
   #     interval: 10s
   #     timeout: 5s
   #     retries: 3

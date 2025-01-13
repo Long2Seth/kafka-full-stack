@@ -29,7 +29,7 @@ keytool -exportcert \
 keytool -genkeypair \
   -alias server \
   -dname "CN=chhaya, OU=Engineering, O=Company, L=City, ST=State, C=US" \
-  -ext "SAN=DNS:kafka-1,DNS:kafka-2,DNS:kafka-3,DNS:schema-registry,DNS:kafka-ui,DNS:debezium-kafka-connect,DNS:localhost,IP:34.69.50.191" \
+  -ext "SAN=DNS:kafka-1,DNS:kafka-2,DNS:kafka-3,DNS:schema-registry,DNS:kafka-ui,DNS:debezium-kafka-connect,DNS:localhost,IP:35.225.212.218" \
   -keystore secrets/kafka.server.keystore.jks \
   -keypass $PASSWORD \
   -storepass $PASSWORD \
@@ -59,7 +59,7 @@ keytool -keystore secrets/ca.keystore.jks \
   -gencert \
   -infile secrets/server.csr \
   -outfile secrets/server.crt \
-  -ext "SAN=DNS:kafka-1,DNS:kafka-2,DNS:kafka-3,DNS:schema-registry,DNS:kafka-ui,DNS:debezium-kafka-connect,DNS:localhost,IP:34.69.50.191" \
+  -ext "SAN=DNS:kafka-1,DNS:kafka-2,DNS:kafka-3,DNS:schema-registry,DNS:kafka-ui,DNS:debezium-kafka-connect,DNS:localhost,IP:35.225.212.218" \
   -storepass $PASSWORD \
   -keypass $PASSWORD \
   -ext bc=ca:false \
